@@ -23,4 +23,7 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      ### Add the job
+      - build
+      - test:
+          requires:
+           - build
