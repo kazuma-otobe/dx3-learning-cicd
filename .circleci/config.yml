@@ -33,6 +33,11 @@ jobs:
     steps:
       - checkout
       - run:
+         name: Install npm
+         command: 
+           curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+           yum install -y nodejs
+      - run:
          name: Front Build
          command:
            npm install
