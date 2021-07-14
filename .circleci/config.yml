@@ -42,7 +42,7 @@ jobs:
          command: |
            npm install
            npm run build
-      - run: |
+      - run: 
          name: Deploy to S3
          command: aws s3 cp ./dist s3://circlecitestotobe --recursive
 
