@@ -34,15 +34,15 @@ jobs:
       - checkout
       - run:
          name: Install npm
-         command: 
+         command: |
            curl -sL https://rpm.nodesource.com/setup_12.x | bash -
            yum install -y nodejs
       - run:
          name: Front Build
-         command:
+         command: |
            npm install
            npm run build
-      - run:
+      - run: |
          name: Deploy to S3
          command: aws s3 cp ./dist s3://circlecitestotobe --recursive
 
