@@ -44,7 +44,7 @@ jobs:
            npm run build
       - run: 
          name: Deploy to S3
-         command: aws s3 cp ./dist s3://circlecitestotobe --recursive
+         command: aws s3 cp ./dist/dx3-learning-cicd/ s3://circlecitestotobe --recursive
 
 workflows:
   my_workflow:
